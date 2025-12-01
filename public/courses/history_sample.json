@@ -1,0 +1,45 @@
+{
+  "title": "History: The Printing Press",
+  "description": "Discover how Johannes Gutenberg's invention revolutionized communication and accelerated the spread of knowledge.",
+  "subject": "History",
+  "difficulty": "Intermediate",
+  "lessons": [
+    {
+      "title": "The Invention of Movable Type",
+      "content": "Before the mid-15th century, books in Europe were copied by hand, a laborious process mostly performed by scribes, or printed from carved wooden blocks. Around 1440, Johannes Gutenberg, a German goldsmith, developed a system of movable metal type. By casting individual letters in metal alloys, he could quickly assemble texts, apply a oil-based ink, and print them onto paper using a modified wine press. This invention marked the beginning of modern printing and mass communication."
+    },
+    {
+      "title": "The Impact on the Renaissance & Reformation",
+      "content": "Gutenberg's printing press rapidly decreased the cost of book production. This triggered an information explosion. Ideas could travel farther and faster than ever. It fueled the scientific revolution and the Renaissance by preserving and spreading scholarly works. It also played a central role in the Protestant Reformation, allowing Martin Luther to publish and widely distribute his criticisms of the church, including translations of the Bible into common vernacular languages."
+    }
+  ],
+  "quizzes": [
+    {
+      "question": "Who is credited with inventing movable type printing in Europe?",
+      "options": ["Martin Luther", "Johannes Gutenberg", "Galileo Galilei", "Leonardo da Vinci"],
+      "answer": 1,
+      "explanation": "Johannes Gutenberg, a German goldsmith, invented the movable metal type press around 1440."
+    },
+    {
+      "question": "How did the printing press affect the Protestant Reformation?",
+      "options": [
+        "It had no effect.",
+        "It allowed rapid distribution of translations and criticisms of the church.",
+        "It made printing illegal.",
+        "It caused books to become rarer."
+      ],
+      "answer": 1,
+      "explanation": "The press allowed Reformers to quickly print and distribute Bibles and essays in vernacular languages, mobilizing the public."
+    }
+  ],
+  "flashcards": [
+    {
+      "question": "In what decade did Gutenberg develop movable type in Europe?",
+      "answer": "1440s."
+    },
+    {
+      "question": "What primary materials did Gutenberg use to build type?",
+      "answer": "Metal alloys (lead, tin, and antimony) cast in precise molds."
+    }
+  ]
+}

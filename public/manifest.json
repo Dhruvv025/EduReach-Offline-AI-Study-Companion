@@ -1,0 +1,17 @@
+{
+  "short_name": "EduReach",
+  "name": "EduReach: Offline AI Study Companion",
+  "description": "An offline-first study companion with quizzes, flashcards, and WebLLM support for students in low-bandwidth areas.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "display": "standalone",
+  "orientation": "portrait"
+}
