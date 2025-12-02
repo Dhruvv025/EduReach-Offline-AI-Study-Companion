@@ -163,3 +163,6 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ├── public/
 └── package.json
 ```
+
+## 📄 License details
+This project is fully open source under the MIT License terms. Code modifications and contributions are welcome.
