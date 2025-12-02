@@ -146,3 +146,20 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 * **flashcards**: id (autoIncrement), courseId, question, answer, interval, easeFactor, repetitions, nextReview
 * **progress**: id (autoIncrement), courseId, completedLessons (array), quizScores (object)
 * **studyLog**: id (autoIncrement), date, type, timestamp
+
+## 📂 Directory Layout
+```
+├── index.html
+├── src/
+│   ├── main.js
+│   ├── style.css
+│   ├── db.js
+│   └── components/
+│       ├── dashboard.js
+│       ├── courseList.js
+│       ├── flashcard.js
+│       ├── quiz.js
+│       └── aiTutor.js
+├── public/
+└── package.json
+```
