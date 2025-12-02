@@ -140,3 +140,9 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 * Ensure you are running Chrome or Edge version 113+.
 * Verify that hardware acceleration is enabled in your browser settings.
 * Visit [chrome://gpu](chrome://gpu) to check WebGPU state.
+
+## 🗄️ Database Schema
+* **courses**: id (autoIncrement), title, subject, difficulty, lessons (array), quizzes (array)
+* **flashcards**: id (autoIncrement), courseId, question, answer, interval, easeFactor, repetitions, nextReview
+* **progress**: id (autoIncrement), courseId, completedLessons (array), quizScores (object)
+* **studyLog**: id (autoIncrement), date, type, timestamp
