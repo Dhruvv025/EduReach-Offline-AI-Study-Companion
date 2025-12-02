@@ -1188,3 +1188,373 @@ html[data-theme="high-contrast"] .list-item-card:hover {
   outline: 2px solid #ffff00;
 }
 
+
+
+/* ==========================================================================
+   Theme Transitions & Accent Customizer
+   ========================================================================== */
+
+/* Apply transition variables to key structural layout elements */
+body, 
+.app-header, 
+.app-nav, 
+.nav-btn, 
+.dashboard-container, 
+.card, 
+.btn, 
+.list-item-card, 
+.empty-state, 
+.form-select, 
+.form-control, 
+.chat-messages-box, 
+.msg-bubble, 
+.app-footer {
+  transition: background-color var(--transition-normal), border-color var(--transition-normal), color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+/* Accent Color Customizers - Excludes High Contrast to protect accessibility rules */
+html:not([data-theme="high-contrast"]).accent-blue {
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-primary-rgb: 59, 130, 246;
+  --brand-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+html:not([data-theme="high-contrast"]).accent-emerald {
+  --color-primary: #10b981;
+  --color-primary-hover: #059669;
+  --color-primary-rgb: 16, 185, 129;
+  --brand-gradient: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+}
+html:not([data-theme="high-contrast"]).accent-amethyst {
+  --color-primary: #8b5cf6;
+  --color-primary-hover: #7c3aed;
+  --color-primary-rgb: 139, 92, 246;
+  --brand-gradient: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+}
+html:not([data-theme="high-contrast"]).accent-rose {
+  --color-primary: #f43f5e;
+  --color-primary-hover: #e11d48;
+  --color-primary-rgb: 244, 63, 94;
+  --brand-gradient: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
+}
+html:not([data-theme="high-contrast"]).accent-amber {
+  --color-primary: #f59e0b;
+  --color-primary-hover: #d97706;
+  --color-primary-rgb: 245, 158, 11;
+  --brand-gradient: linear-gradient(135deg, #f59e0b 0%, #f43f5e 100%);
+}
+
+/* Settings Dropdown Panel */
+.settings-dropdown-wrapper {
+  position: relative;
+}
+
+.settings-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 280px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 1.25rem;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 200;
+  animation: slideUp var(--transition-fast) forwards;
+}
+
+.settings-dropdown.show {
+  display: flex;
+}
+
+.settings-section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+/* Accent Picker button list */
+.accent-picker {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.accent-color-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.accent-color-btn:hover {
+  transform: scale(1.15);
+}
+
+.accent-color-btn.active {
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.35);
+}
+
+/* Color definitions for accent picker circles */
+.btn-accent-blue { background-color: #3b82f6; }
+.btn-accent-emerald { background-color: #10b981; }
+.btn-accent-amethyst { background-color: #8b5cf6; }
+.btn-accent-rose { background-color: #f43f5e; }
+.btn-accent-amber { background-color: #f59e0b; }
+
+/* ==========================================================================
+   Dashboard & Analytics Styles
+   ========================================================================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+}
+
+.stat-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--border-radius-sm);
+  background: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+html[data-theme="high-contrast"] .stat-icon-box {
+  background: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.stat-info h3 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.stat-info p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 550;
+}
+
+/* Heatmap Activity Matrix */
+.heatmap-card {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+}
+
+.heatmap-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.legend-box {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.heatmap-grid-scroll {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.heatmap-grid {
+  display: flex;
+  gap: 4px;
+  min-width: 480px;
+  justify-content: space-between;
+}
+
+.heatmap-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.heatmap-col-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  height: 12px;
+}
+
+.heatmap-day {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.heatmap-day:hover {
+  transform: scale(1.2);
+  z-index: 5;
+}
+
+/* Heatmap colors based on activity levels */
+.heatmap-day.lvl-0 { background-color: var(--bg-tertiary); }
+.heatmap-day.lvl-1 { background-color: rgba(var(--color-primary-rgb), 0.25); border-color: rgba(var(--color-primary-rgb), 0.3); }
+.heatmap-day.lvl-2 { background-color: rgba(var(--color-primary-rgb), 0.5); border-color: rgba(var(--color-primary-rgb), 0.6); }
+.heatmap-day.lvl-3 { background-color: rgba(var(--color-primary-rgb), 0.75); border-color: rgba(var(--color-primary-rgb), 0.85); }
+.heatmap-day.lvl-4 { background-color: var(--color-primary); border-color: var(--color-primary-hover); }
+
+/* Heatmap Tooltip */
+.heatmap-day[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1e293b;
+  color: #ffffff;
+  font-size: 0.7rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.15s ease-in-out;
+}
+
+.heatmap-day:hover[data-tooltip]::before {
+  opacity: 1;
+}
+
+/* Dashboard Action list */
+.resume-card-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* ==========================================================================
+   Course Creator & Exporter Styles
+   ========================================================================== */
+
+.creator-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.creator-form-group-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.creator-step-card {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+}
+
+.creator-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.creator-item-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+}
+
+.creator-item-badge span {
+  font-weight: 550;
+}
+
+.creator-item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-icon-danger {
+  background: transparent;
+  border: none;
+  color: var(--color-danger);
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 0.25rem;
+  transition: opacity var(--transition-fast);
+}
+
+.btn-icon-danger:hover {
+  opacity: 0.8;
+}
+
+.creator-wizard-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+/* Custom layout helpers */
+.w-full { width: 100%; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+
+
+
