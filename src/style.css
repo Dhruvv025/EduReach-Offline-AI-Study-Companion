@@ -1577,3 +1577,6 @@ html[data-theme="high-contrast"] .stat-icon-box {
 
 /* Utility Class */
 .flex-center { display: flex; align-items: center; justify-content: center; }
+
+/* Utility Class */
+.font-bold { font-weight: 700; }
