@@ -1583,3 +1583,6 @@ html[data-theme="high-contrast"] .stat-icon-box {
 
 /* Utility Class */
 .w-50 { width: 50%; }
+
+/* Utility Class */
+.h-auto { height: auto; }
