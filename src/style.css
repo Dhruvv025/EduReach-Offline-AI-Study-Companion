@@ -1580,3 +1580,6 @@ html[data-theme="high-contrast"] .stat-icon-box {
 
 /* Utility Class */
 .font-bold { font-weight: 700; }
+
+/* Utility Class */
+.w-50 { width: 50%; }
