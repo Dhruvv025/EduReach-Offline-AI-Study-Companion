@@ -1571,3 +1571,6 @@ html[data-theme="high-contrast"] .stat-icon-box {
 
 /* Utility Class */
 .p-2 { padding: 0.5rem; }
+
+/* Utility Class */
+.text-center { text-align: center; }
