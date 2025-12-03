@@ -1565,3 +1565,6 @@ html[data-theme="high-contrast"] .stat-icon-box {
 
 /* Utility Class */
 .m-2 { margin: 0.5rem; }
+
+/* Utility Class */
+.p-1 { padding: 0.25rem; }
