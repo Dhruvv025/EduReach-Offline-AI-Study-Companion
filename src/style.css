@@ -1586,3 +1586,6 @@ html[data-theme="high-contrast"] .stat-icon-box {
 
 /* Utility Class */
 .h-auto { height: auto; }
+
+/* Utility Class */
+.opacity-90 { opacity: 0.9; }
