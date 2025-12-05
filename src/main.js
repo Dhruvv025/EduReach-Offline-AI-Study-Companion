@@ -96,6 +96,9 @@ export function navigateToTab(targetTabId) {
 }
 
 // Set up UI tab button triggers
+/**
+ * Configures click listeners on navigation bar button elements.
+ */
 function initTabs() {
   const navBtns = document.querySelectorAll('.nav-btn');
   navBtns.forEach(btn => {
