@@ -40,6 +40,10 @@ export async function logStudyActivity(type) {
 }
 
 // Helper to seed initial sample data if database is empty
+/**
+ * Seeds IndexedDB with high-quality educational modules (AI, Space, Water Cycle, Geometry)
+ * when starting the application for the first time.
+ */
 export async function seedDatabase() {
   const courseCount = await db.courses.count();
   if (courseCount > 0) return; // Already seeded
