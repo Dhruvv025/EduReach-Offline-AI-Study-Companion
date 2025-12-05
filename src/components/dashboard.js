@@ -109,6 +109,9 @@ export async function calculateStreak() {
 }
 
 // Render the 35-day (5 weeks) GitHub-style study heatmap grid
+/**
+ * Renders the contribution heatmap matrix for the last 35 days.
+ */
 async function renderHeatmap() {
   const container = document.getElementById('study-heatmap-container');
   if (!container) return;
