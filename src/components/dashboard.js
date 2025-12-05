@@ -1,6 +1,11 @@
 import { db } from '../db';
 
 // Render the entire Student Dashboard
+/**
+ * Renders the primary student progress dashboard metrics and calendar.
+ * @param {Function} onNavigateToTab - Navigational callback.
+ * @param {Function} onSelectLesson - Lesson selection callback.
+ */
 export async function renderDashboard(onNavigateToTab, onSelectLesson) {
   // Update stats counts
   await updateStats();
