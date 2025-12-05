@@ -63,6 +63,10 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 // Programmatic tab navigation
+/**
+ * Navigates to a specific UI section programmatically and handles hot module loads.
+ * @param {string} targetTabId - DOM ID of the tab section element.
+ */
 export function navigateToTab(targetTabId) {
   const navBtns = document.querySelectorAll('.nav-btn');
   const tabContents = document.querySelectorAll('.tab-content');
