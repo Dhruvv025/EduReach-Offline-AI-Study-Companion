@@ -11,6 +11,11 @@ db.version(2).stores({
 });
 
 // Helper to log a study activity for analytics and streak calculation
+/**
+ * Logs a study event (lesson completion, quiz attempt, card review) to IndexedDB
+ * for tracking streaks and daily contribution calendar counts.
+ * @param {string} type - The type of learning activity.
+ */
 export async function logStudyActivity(type) {
   try {
     const todayStr = new Date().toLocaleDateString('sv'); // Formats as YYYY-MM-DD in local time
