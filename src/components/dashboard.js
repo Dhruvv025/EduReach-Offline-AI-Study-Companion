@@ -60,6 +60,10 @@ async function updateStats() {
 }
 
 // Calculate the consecutive study streak (days with at least one logged activity)
+/**
+ * Checks IndexedDB logs to compute the consecutive daily study streak.
+ * @returns {number} The active streak day count.
+ */
 export async function calculateStreak() {
   try {
     const logs = await db.studyLog.toArray();
