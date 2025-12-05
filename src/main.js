@@ -109,6 +109,9 @@ function initTabs() {
 }
 
 // Light / Dark / High Contrast Theme & Primary Accent customizer
+/**
+ * Sets up listeners for the theme dropdown selection and color accent pickers.
+ */
 function initThemes() {
   const settingsBtn = document.getElementById('settings-toggle-btn');
   const settingsMenu = document.getElementById('settings-menu');
