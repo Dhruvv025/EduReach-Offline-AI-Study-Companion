@@ -18,6 +18,9 @@ export async function renderDashboard(onNavigateToTab, onSelectLesson) {
 }
 
 // Update the numerical metrics at the top of the dashboard
+/**
+ * Recalculates stats values from IndexedDB and updates stats badges.
+ */
 async function updateStats() {
   const dashStreakEl = document.getElementById('dash-streak');
   const dashLessonsEl = document.getElementById('dash-completed-lessons');
