@@ -157,6 +157,10 @@ function initThemes() {
   });
 }
 
+/**
+ * Applies selected theme attributes (dark, light, contrast) to the root element.
+ * @param {string} theme - The theme configuration name.
+ */
 function applyTheme(theme) {
   if (theme === 'system') {
     const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
