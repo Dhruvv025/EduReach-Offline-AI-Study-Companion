@@ -13,6 +13,9 @@ export function setActiveLessonContext(courseId, lessonIndex) {
 }
 
 // Initialize AI Tutor View logic
+/**
+ * Binds settings switches, provider selections, and text trigger inputs for the AI Tutor.
+ */
 export function initAiTutor() {
   const modeSelect = document.getElementById('ai-mode-select');
   const providerSelect = document.getElementById('api-provider');
