@@ -95,6 +95,9 @@ function updateModelDefault() {
 }
 
 // Save credentials locally
+/**
+ * Saves selected settings and security key tokens to LocalStorage.
+ */
 function saveCredentials() {
   localStorage.setItem('er_ai_mode', document.getElementById('ai-mode-select').value);
   localStorage.setItem('er_api_provider', document.getElementById('api-provider').value);
