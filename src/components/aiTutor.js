@@ -108,6 +108,9 @@ function saveCredentials() {
 }
 
 // Load credentials from local storage
+/**
+ * Restores active configuration keys from local browser cache.
+ */
 function loadCredentials() {
   const mode = localStorage.getItem('er_ai_mode');
   const provider = localStorage.getItem('er_api_provider');
