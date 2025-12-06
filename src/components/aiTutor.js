@@ -79,6 +79,9 @@ export function initAiTutor() {
 }
 
 // Load default models based on selected API provider
+/**
+ * Loads standard model identifiers depending on selected cloud provider.
+ */
 function updateModelDefault() {
   const provider = document.getElementById('api-provider').value;
   const modelInput = document.getElementById('model-name');
