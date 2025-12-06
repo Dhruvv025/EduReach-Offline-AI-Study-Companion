@@ -50,6 +50,9 @@ export function initCourseCreator(onCourseCreated) {
 }
 
 // Add a lesson to local state
+/**
+ * Adds a new lesson input block to the custom course builder state.
+ */
 function addLesson() {
   const titleEl = document.getElementById('creator-lesson-title');
   const contentEl = document.getElementById('creator-lesson-content');
