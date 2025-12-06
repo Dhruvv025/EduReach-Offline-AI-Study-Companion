@@ -121,6 +121,9 @@ function addQuiz() {
 }
 
 // Add a flashcard to local state
+/**
+ * Adds a card front/back pair to the custom course builder state.
+ */
 function addFlashcard() {
   const questionEl = document.getElementById('creator-fc-question');
   const answerEl = document.getElementById('creator-fc-answer');
