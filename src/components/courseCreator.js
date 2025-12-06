@@ -77,6 +77,9 @@ function addLesson() {
 }
 
 // Add a quiz question to local state
+/**
+ * Adds a quiz question input to the custom course builder state.
+ */
 function addQuiz() {
   const questionEl = document.getElementById('creator-quiz-question');
   const optionEls = document.querySelectorAll('.quiz-creator-opt');
