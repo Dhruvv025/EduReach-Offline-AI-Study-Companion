@@ -6,6 +6,10 @@ let courseQuizzes = [];
 let courseFlashcards = [];
 
 // Initialize Course Creator wizard and form controls
+/**
+ * Initialized listeners for Course Creator form inputs and button actions.
+ * @param {Function} onCourseCreated - Callback trigger when course is saved.
+ */
 export function initCourseCreator(onCourseCreated) {
   // Lessons Form
   const addLessonBtn = document.getElementById('creator-add-lesson-btn');
