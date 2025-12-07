@@ -64,6 +64,13 @@ export async function renderCourseList(onSelectLesson) {
 }
 
 // Render lessons nested inside a course list item
+/**
+ * Renders sub lessons links list inside course container elements.
+ * @param {Object} course - The course catalog entry.
+ * @param {Object} progress - Course progress levels.
+ * @param {HTMLElement} container - The nested list target.
+ * @param {Function} onSelectLesson - Lesson link callback.
+ */
 function renderSubLessons(course, progress, container, onSelectLesson) {
   container.innerHTML = '';
   
