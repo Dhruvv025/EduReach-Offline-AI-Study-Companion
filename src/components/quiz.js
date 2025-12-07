@@ -66,6 +66,9 @@ function startQuiz(course) {
 }
 
 // Load current question in arena
+/**
+ * Renders current quiz question options in the active challenge arena.
+ */
 function loadQuestion() {
   if (!activeQuiz) return;
   const questions = activeQuiz.quizzes;
