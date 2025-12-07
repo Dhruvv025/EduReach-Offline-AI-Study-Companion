@@ -45,6 +45,10 @@ export async function renderQuizList() {
 }
 
 // Start active quiz session
+/**
+ * Initiates a new multiple-choice quiz challenge arena session.
+ * @param {Object} course - The course container data.
+ */
 function startQuiz(course) {
   activeQuiz = course;
   currentQuestionIndex = 0;
