@@ -55,6 +55,9 @@ export async function initFlashcardTab() {
 }
 
 // Load due cards and update stats
+/**
+ * Fetches and displays reviews scheduled for SM-2 repetition today.
+ */
 export async function loadDueCards() {
   const selectFilter = document.getElementById('flashcard-subject-filter');
   const courseFilter = selectFilter ? selectFilter.value : 'all';
