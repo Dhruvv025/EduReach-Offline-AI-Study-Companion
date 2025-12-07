@@ -94,6 +94,11 @@ export async function loadDueCards() {
 }
 
 // SM-2 Spaced Repetition Algorithm
+/**
+ * Runs the SM-2 algorithm to compute next review intervals.
+ * @param {number} cardId - Dexie DB key identifier.
+ * @param {number} quality - User response rating (0 to 5).
+ */
 async function rescheduleCard(cardId, quality) {
   const card = await db.flashcards.get(cardId);
   if (!card) return;
