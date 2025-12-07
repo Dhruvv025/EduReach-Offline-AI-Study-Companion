@@ -99,6 +99,11 @@ function loadQuestion() {
 }
 
 // Check selected option
+/**
+ * Checks user selected option index and generates answer correctness feedback.
+ * @param {number} selectedIndex - The option element index.
+ * @param {HTMLElement} selectedBtn - The button trigger.
+ */
 async function handleAnswer(selectedIndex, selectedBtn) {
   if (!activeQuiz) return;
   const questions = activeQuiz.quizzes;
