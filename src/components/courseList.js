@@ -102,6 +102,12 @@ function renderSubLessons(course, progress, container, onSelectLesson) {
 }
 
 // Render the active lesson into the reading panel
+/**
+ * Loads selected lesson markup text to reader workspace.
+ * @param {number} courseId - Course entry ID.
+ * @param {number} lessonIndex - Inner index list offset.
+ * @param {Function} onProgressUpdated - Trigger update callback.
+ */
 export async function loadLessonContent(courseId, lessonIndex, onProgressUpdated) {
   const course = await db.courses.get(courseId);
   if (!course || !course.lessons || !course.lessons[lessonIndex]) return;
