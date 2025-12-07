@@ -4,6 +4,9 @@ let currentCard = null;
 let dueCards = [];
 
 // Initialize flashcard filters and stats
+/**
+ * Mounts active selectors, flips handlers, and review buttons for flashcards.
+ */
 export async function initFlashcardTab() {
   const selectFilter = document.getElementById('flashcard-subject-filter');
   if (!selectFilter) return;
