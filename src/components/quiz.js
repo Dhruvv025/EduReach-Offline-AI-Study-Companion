@@ -5,6 +5,9 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 // Initialize Quiz Directory List
+/**
+ * Loads and displays the courses quiz selections panel.
+ */
 export async function renderQuizList() {
   const container = document.getElementById('quiz-list-container');
   if (!container) return;
