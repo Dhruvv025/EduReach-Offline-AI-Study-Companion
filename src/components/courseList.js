@@ -1,6 +1,10 @@
 import { db } from '../db';
 
 // Render the course directory sidebar list
+/**
+ * Renders list items and completion badges in the courses sidebar.
+ * @param {Function} onSelectLesson - Navigation selection trigger.
+ */
 export async function renderCourseList(onSelectLesson) {
   const container = document.getElementById('course-list-container');
   if (!container) return;
