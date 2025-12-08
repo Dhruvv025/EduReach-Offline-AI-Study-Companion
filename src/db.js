@@ -3,6 +3,8 @@ import Dexie from 'dexie';
 export const db = new Dexie('EduReachDB');
 
 // Define database schema (v2 introduces studyLog table for dashboard analytics)
+
+// Configure schema stores for courses, flashcards, user progress, and streaks logger
 db.version(2).stores({
   courses: '++id, title, subject, difficulty',
   flashcards: '++id, courseId, nextReview',
