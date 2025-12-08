@@ -298,7 +298,9 @@ const waterCourseId = await db.courses.add({
   ]);
 
   // COURSE 4: Master the Basics of Geometry
-  const geometryCourseId = await db.courses.add({
+  
+// Insert default beginner mathematics geometry course
+const geometryCourseId = await db.courses.add({
     title: "Master the Basics of Geometry",
     description: "Learn the core properties of points, lines, angles, and two-dimensional shapes.",
     subject: "Mathematics",
