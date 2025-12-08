@@ -53,7 +53,9 @@ export async function seedDatabase() {
   console.log("[Database] Seeding rich initial educational data...");
 
   // COURSE 1: Foundations of Artificial Intelligence & Neural Networks
-  const aiCourseId = await db.courses.add({
+  
+// Insert default artificial intelligence course modules
+const aiCourseId = await db.courses.add({
     title: "Foundations of AI & Neural Networks",
     description: "Unravel the mechanics behind machine learning models, perceptrons, and the future of deep learning.",
     subject: "Technology",
