@@ -143,7 +143,9 @@ const aiCourseId = await db.courses.add({
   ]);
 
   // COURSE 2: A Journey Through Space Exploration
-  const spaceCourseId = await db.courses.add({
+  
+// Insert default history of space race course modules
+const spaceCourseId = await db.courses.add({
     title: "A Journey Through Space Exploration",
     description: "Trace humanity's steps from the early Space Race to the Apollo moon landing and modern Mars rovers.",
     subject: "History",
