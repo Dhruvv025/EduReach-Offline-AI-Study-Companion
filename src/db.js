@@ -218,7 +218,9 @@ const spaceCourseId = await db.courses.add({
   ]);
 
   // COURSE 3: The Water Cycle & Climate Ecology
-  const waterCourseId = await db.courses.add({
+  
+// Insert default climate ecosystems water cycle course
+const waterCourseId = await db.courses.add({
     title: "The Water Cycle & Climate Ecology",
     description: "Learn how water circulates through our planet and sustains fragile ecosystems.",
     subject: "Science",
