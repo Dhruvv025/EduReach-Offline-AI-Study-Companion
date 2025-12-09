@@ -33,7 +33,9 @@ registerServiceWorker();
   initNetworkStatus();
 
   // 4. Initialize Settings Menu (Themes & Accent Colors)
-  initThemes();
+  
+// Load saved themes and accent colors on reload
+initThemes();
 
   // 5. Initialize Tabs & Navigation
   initTabs();
