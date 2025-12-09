@@ -23,7 +23,9 @@ export async function logStudyActivity(type) {
     const todayStr = new Date().toLocaleDateString('sv'); // Formats as YYYY-MM-DD in local time
     
     // Check if we already logged this specific activity type today
-    const existing = await db.studyLog
+    
+// Verify if active study logs exist for today's timestamp
+const existing = await db.studyLog
       .where('date').equals(todayStr)
       .and(item => item.type === type)
       .first();
