@@ -25,7 +25,9 @@ await seedDatabase();
   }
 
   // 2. Setup PWA Service Worker Caching
-  registerServiceWorker();
+  
+// Start service worker caching lifecycle for assets
+registerServiceWorker();
 
   // 3. Setup Network listeners
   initNetworkStatus();
