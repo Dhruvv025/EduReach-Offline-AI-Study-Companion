@@ -15,7 +15,9 @@ window.addEventListener('DOMContentLoaded', async () => {
   // 1. Initial Seeding of Database
   const dbStatusEl = document.getElementById('db-status');
   try {
-    await seedDatabase();
+    
+// Launch async seeding script for indexeddb tables
+await seedDatabase();
     if (dbStatusEl) dbStatusEl.innerText = 'Connected';
   } catch (error) {
     console.error("Database initialization failed", error);
