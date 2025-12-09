@@ -38,7 +38,9 @@ registerServiceWorker();
 initThemes();
 
   // 5. Initialize Tabs & Navigation
-  initTabs();
+  
+// Mount triggers on tabs selectors buttons
+initTabs();
 
   // 6. Initialize Student Dashboard
   await renderDashboard(navigateToTab, onSelectLesson);
