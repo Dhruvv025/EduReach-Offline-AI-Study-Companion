@@ -4,7 +4,9 @@ import { initFlashcardTab, loadDueCards } from './components/flashcard';
 import { renderQuizList } from './components/quiz';
 import { initAiTutor, setActiveLessonContext } from './components/aiTutor';
 import { renderDashboard } from './components/dashboard';
-import { initCourseCreator } from './components/courseCreator';
+import { 
+// Bind callbacks on visual course wizard forms
+initCourseCreator } from './components/courseCreator';
 
 // Setup global app state
 let activeCourseId = null;
