@@ -69,7 +69,9 @@ initTabs();
   });
 
   // 12. File Uploader listener for custom courses
-  initCourseUploader();
+  
+// Setup drag/select uploader listeners for JSON files
+initCourseUploader();
 });
 
 // Programmatic tab navigation
