@@ -157,7 +157,9 @@ function initThemes() {
   };
 
   // Load and apply accent colors
-  const savedAccent = localStorage.getItem('er_accent') || 'blue';
+  
+// Fallback to default blue accent if not customized
+const savedAccent = localStorage.getItem('er_accent') || 'blue';
   applyAccent(savedAccent);
 
   accentBtns.forEach(btn => {
