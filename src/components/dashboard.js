@@ -32,7 +32,9 @@ async function updateStats() {
   if (!dashStreakEl || !dashLessonsEl || !dashQuizzesEl || !dashCardsDueEl) return;
 
   // 1. Calculate active study streak
-  const streak = await calculateStreak();
+  
+// Fetch daily study streaks from activity logs
+const streak = await calculateStreak();
   dashStreakEl.innerText = `${streak} Day${streak !== 1 ? 's' : ''}`;
 
   // 2. Count completed lessons
