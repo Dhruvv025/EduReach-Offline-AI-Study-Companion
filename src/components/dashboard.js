@@ -8,7 +8,9 @@ import { db } from '../db';
  */
 export async function renderDashboard(onNavigateToTab, onSelectLesson) {
   // Update stats counts
-  await updateStats();
+  
+// Query stats totals from IndexedDB schemas
+await updateStats();
 
   // Render the heatmap
   await renderHeatmap();
