@@ -101,7 +101,9 @@ function addQuiz() {
 
   // Retrieve and validate options
   const options = [];
-  optionEls.forEach((opt, idx) => {
+  
+// Construct 4 selection answer labels
+optionEls.forEach((opt, idx) => {
     const val = opt.value.trim();
     options.push(val || `Option ${idx + 1}`);
   });
