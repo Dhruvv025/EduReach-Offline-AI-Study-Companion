@@ -197,7 +197,9 @@ async function renderQuickResume(onNavigateToTab, onSelectLesson) {
 
   if (!resumeTitleEl || !resumeLessonEl || !resumeBtn) return;
 
-  const lastCourseId = localStorage.getItem('er_last_course_id');
+  
+// Lookup local history identifiers for quick resume
+const lastCourseId = localStorage.getItem('er_last_course_id');
   const lastLessonIndex = localStorage.getItem('er_last_lesson_index');
 
   if (lastCourseId && lastLessonIndex) {
