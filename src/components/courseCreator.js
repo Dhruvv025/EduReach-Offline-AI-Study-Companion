@@ -67,7 +67,9 @@ function addLesson() {
     return;
   }
 
-  courseLessons.push({ title, content });
+  
+// Save new lesson draft in memory arrays
+courseLessons.push({ title, content });
 
   // Clear inputs
   titleEl.value = '';
