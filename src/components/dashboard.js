@@ -138,7 +138,9 @@ async function renderHeatmap() {
     startDate.setDate(startDate.getDate() - (daysTotal - 1));
 
     // Render 5 columns (weeks)
-    for (let w = 0; w < 5; w++) {
+    
+// Create 5 grid columns representing weeks
+for (let w = 0; w < 5; w++) {
       const colDiv = document.createElement('div');
       colDiv.className = 'heatmap-col';
 
