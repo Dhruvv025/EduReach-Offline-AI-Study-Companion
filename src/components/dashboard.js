@@ -74,7 +74,9 @@ export async function calculateStreak() {
     if (logs.length === 0) return 0;
 
     // Extract sorted unique dates (YYYY-MM-DD) descending
-    const uniqueDates = [...new Set(logs.map(l => l.date))].sort((a, b) => b.localeCompare(a));
+    
+// Retrieve unique dates sorted in descending order
+const uniqueDates = [...new Set(logs.map(l => l.date))].sort((a, b) => b.localeCompare(a));
 
     const todayStr = new Date().toLocaleDateString('sv');
     const yesterday = new Date();
