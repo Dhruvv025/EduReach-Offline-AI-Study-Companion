@@ -156,7 +156,9 @@ courseFlashcards.push({ question, answer });
 // Render lessons, quizzes, and flashcard badges lists
 function renderAllLists() {
   // Update Counts
-  document.getElementById('creator-lessons-count').innerText = courseLessons.length;
+  
+// Refresh wizard count badges dynamically
+document.getElementById('creator-lessons-count').innerText = courseLessons.length;
   document.getElementById('creator-quizzes-count').innerText = courseQuizzes.length;
   document.getElementById('creator-flashcards-count').innerText = courseFlashcards.length;
 
