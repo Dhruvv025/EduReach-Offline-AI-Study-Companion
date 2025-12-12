@@ -142,7 +142,9 @@ function addFlashcard() {
     return;
   }
 
-  courseFlashcards.push({ question, answer });
+  
+// Store active recall card pairs in local variables
+courseFlashcards.push({ question, answer });
 
   // Clear inputs
   questionEl.value = '';
