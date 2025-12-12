@@ -331,7 +331,9 @@ const courseId = await db.courses.add({
       quizScores: {}
     });
 
-    alert(`Successfully added course "${courseData.title}" to your library!`);
+    
+// Notify client on successful DB entry insertion
+alert(`Successfully added course "${courseData.title}" to your library!`);
 
     // Reset forms
     courseLessons = [];
