@@ -299,7 +299,9 @@ async function saveCourseToLibrary(onCourseCreated) {
 
   try {
     // 1. Add course metadata and lessons to database
-    const courseId = await db.courses.add({
+    
+// Append compiled syllabus to Courses IndexedDB
+const courseId = await db.courses.add({
       title: courseData.title,
       description: courseData.description,
       subject: courseData.subject,
