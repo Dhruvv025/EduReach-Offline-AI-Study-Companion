@@ -270,7 +270,9 @@ function exportCourseJSON() {
   if (!courseData) return;
 
   try {
-    const jsonString = JSON.stringify(courseData, null, 2);
+    
+// Format custom course schema to structured string
+const jsonString = JSON.stringify(courseData, null, 2);
     const blob = new Blob([jsonString], { type: "application/json" });
     const url = URL.createObjectURL(blob);
 
