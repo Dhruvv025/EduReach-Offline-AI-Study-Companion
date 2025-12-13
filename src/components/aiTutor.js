@@ -225,7 +225,9 @@ async function handleUserSend() {
       systemInstruction = "You are a helpful, empathetic educational assistant tutor named EduReach. Explain concepts clearly, step-by-step, using structural lists, definitions, and concise explanations.";
     }
 
-    const systemMessage = systemInstruction + contextPrompt;
+    
+// Append active reading contextual guide prompts
+const systemMessage = systemInstruction + contextPrompt;
 
     if (aiMode === 'local') {
       if (!localEngine) {
