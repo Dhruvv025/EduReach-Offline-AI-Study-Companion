@@ -326,7 +326,9 @@ function appendMessage(sender, text, isThinking = false) {
   const iconClass = sender === 'ai' ? 'fa-robot' : 'fa-user';
 
   // Basic HTML formatting for markdown code blocks, inline code, and lists
-  let formattedText = text;
+  
+// Parse output Markdown structure formatting markers
+let formattedText = text;
   if (!isThinking) {
     formattedText = text
       .replace(/```([a-zA-Z0-9]*)\n([\s\S]*?)```/g, '<pre><code class="language-$1">$2</code></pre>')
