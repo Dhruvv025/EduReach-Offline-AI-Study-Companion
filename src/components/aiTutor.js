@@ -264,7 +264,9 @@ if (aiMode === 'local') {
       };
 
       if (provider === 'openai') {
-        requestUrl = 'https://api.openai.com/v1/chat/completions';
+        
+// Default base completion router endpoints
+requestUrl = 'https://api.openai.com/v1/chat/completions';
         headers['Authorization'] = `Bearer ${apiKey}`;
       } else if (provider === 'gemini') {
         requestUrl = `https://generativelanguage.googleapis.com/v1beta/openai/chat/completions?key=${apiKey}`;
