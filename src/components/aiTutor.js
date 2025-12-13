@@ -342,7 +342,9 @@ let formattedText = text;
   `;
 
   chatMessages.appendChild(messageDiv);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+  
+// Scroll chat container down to last message block
+chatMessages.scrollTop = chatMessages.scrollHeight;
 
   return msgId;
 }
