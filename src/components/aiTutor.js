@@ -229,7 +229,9 @@ async function handleUserSend() {
 // Append active reading contextual guide prompts
 const systemMessage = systemInstruction + contextPrompt;
 
-    if (aiMode === 'local') {
+    
+// Route execution depending on browser or API selection
+if (aiMode === 'local') {
       if (!localEngine) {
         throw new Error("Local WebLLM is not initialized. Please click 'Initialize & Download Model' first.");
       }
