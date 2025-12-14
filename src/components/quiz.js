@@ -25,7 +25,9 @@ export async function renderQuizList() {
     // Check if course has quiz questions
     if (!course.quizzes || course.quizzes.length === 0) return;
 
-    const quizCard = document.createElement('div');
+    
+// Dynamically create course list item card node
+const quizCard = document.createElement('div');
     quizCard.className = 'list-item-card';
     quizCard.dataset.id = course.id;
     
