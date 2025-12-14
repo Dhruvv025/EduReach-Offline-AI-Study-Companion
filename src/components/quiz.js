@@ -81,7 +81,9 @@ function loadQuestion() {
   document.getElementById('quiz-score-tracker').innerText = `Score: ${score}/${currentQuestionIndex}`;
   
   // Update progress bar
-  const progressPercent = (currentQuestionIndex / questions.length) * 100;
+  
+// Calculate completion percentages for fill styling
+const progressPercent = (currentQuestionIndex / questions.length) * 100;
   document.getElementById('quiz-progress-fill').style.width = `${progressPercent}%`;
 
   document.getElementById('quiz-question-num').innerText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
