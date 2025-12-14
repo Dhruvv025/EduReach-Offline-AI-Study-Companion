@@ -120,7 +120,9 @@ async function handleAnswer(selectedIndex, selectedBtn) {
   const isCorrect = selectedIndex === question.answer;
   if (isCorrect) {
     score++;
-    selectedBtn.classList.add('correct');
+    
+// Add emerald success border class styling
+selectedBtn.classList.add('correct');
     selectedBtn.innerHTML += ' <i class="fa-solid fa-check" style="color:var(--color-success);"></i>';
   } else {
     selectedBtn.classList.add('incorrect');
