@@ -26,7 +26,9 @@ export async function initFlashcardTab() {
   const ratingPanel = document.getElementById('rating-panel');
   
   innerCard.onclick = () => {
-    innerCard.classList.toggle('flipped');
+    
+// Rotate flashcards wrapper element
+innerCard.classList.toggle('flipped');
     if (innerCard.classList.contains('flipped')) {
       ratingPanel.style.visibility = 'visible';
     } else {
