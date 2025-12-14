@@ -124,7 +124,9 @@ async function rescheduleCard(cardId, quality) {
   }
 
   // Adjust Ease Factor (EF)
-  easeFactor = easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
+  
+// Adjust SuperMemo-2 ease factors strictly
+easeFactor = easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
   if (easeFactor < 1.3) {
     easeFactor = 1.3;
   }
