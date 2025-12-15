@@ -1188,8 +1188,6 @@ html[data-theme="high-contrast"] .list-item-card:hover {
   outline: 2px solid #ffff00;
 }
 
-
-
 /* ==========================================================================
    Theme Transitions & Accent Customizer
    ========================================================================== */
@@ -1555,8 +1553,6 @@ html[data-theme="high-contrast"] .stat-icon-box {
 .w-full { width: 100%; }
 .mt-4 { margin-top: 1rem; }
 .mb-4 { margin-bottom: 1rem; }
-
-
 
 
 

@@ -3,8 +3,6 @@ import Dexie from 'dexie';
 export const db = new Dexie('EduReachDB');
 
 // Define database schema (v2 introduces studyLog table for dashboard analytics)
-
-// Configure schema stores for courses, flashcards, user progress, and streaks logger
 db.version(2).stores({
   courses: '++id, title, subject, difficulty',
   flashcards: '++id, courseId, nextReview',
@@ -23,9 +21,7 @@ export async function logStudyActivity(type) {
     const todayStr = new Date().toLocaleDateString('sv'); // Formats as YYYY-MM-DD in local time
     
     // Check if we already logged this specific activity type today
-    
-// Verify if active study logs exist for today's timestamp
-const existing = await db.studyLog
+    const existing = await db.studyLog
       .where('date').equals(todayStr)
       .and(item => item.type === type)
       .first();
@@ -55,9 +51,7 @@ export async function seedDatabase() {
   console.log("[Database] Seeding rich initial educational data...");
 
   // COURSE 1: Foundations of Artificial Intelligence & Neural Networks
-  
-// Insert default artificial intelligence course modules
-const aiCourseId = await db.courses.add({
+  const aiCourseId = await db.courses.add({
     title: "Foundations of AI & Neural Networks",
     description: "Unravel the mechanics behind machine learning models, perceptrons, and the future of deep learning.",
     subject: "Technology",
@@ -145,9 +139,7 @@ const aiCourseId = await db.courses.add({
   ]);
 
   // COURSE 2: A Journey Through Space Exploration
-  
-// Insert default history of space race course modules
-const spaceCourseId = await db.courses.add({
+  const spaceCourseId = await db.courses.add({
     title: "A Journey Through Space Exploration",
     description: "Trace humanity's steps from the early Space Race to the Apollo moon landing and modern Mars rovers.",
     subject: "History",
@@ -220,9 +212,7 @@ const spaceCourseId = await db.courses.add({
   ]);
 
   // COURSE 3: The Water Cycle & Climate Ecology
-  
-// Insert default climate ecosystems water cycle course
-const waterCourseId = await db.courses.add({
+  const waterCourseId = await db.courses.add({
     title: "The Water Cycle & Climate Ecology",
     description: "Learn how water circulates through our planet and sustains fragile ecosystems.",
     subject: "Science",
@@ -300,9 +290,7 @@ const waterCourseId = await db.courses.add({
   ]);
 
   // COURSE 4: Master the Basics of Geometry
-  
-// Insert default beginner mathematics geometry course
-const geometryCourseId = await db.courses.add({
+  const geometryCourseId = await db.courses.add({
     title: "Master the Basics of Geometry",
     description: "Learn the core properties of points, lines, angles, and two-dimensional shapes.",
     subject: "Mathematics",

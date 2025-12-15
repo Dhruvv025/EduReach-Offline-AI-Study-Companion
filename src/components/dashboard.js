@@ -8,9 +8,7 @@ import { db } from '../db';
  */
 export async function renderDashboard(onNavigateToTab, onSelectLesson) {
   // Update stats counts
-  
-// Query stats totals from IndexedDB schemas
-await updateStats();
+  await updateStats();
 
   // Render the heatmap
   await renderHeatmap();
@@ -32,9 +30,7 @@ async function updateStats() {
   if (!dashStreakEl || !dashLessonsEl || !dashQuizzesEl || !dashCardsDueEl) return;
 
   // 1. Calculate active study streak
-  
-// Fetch daily study streaks from activity logs
-const streak = await calculateStreak();
+  const streak = await calculateStreak();
   dashStreakEl.innerText = `${streak} Day${streak !== 1 ? 's' : ''}`;
 
   // 2. Count completed lessons
@@ -74,9 +70,7 @@ export async function calculateStreak() {
     if (logs.length === 0) return 0;
 
     // Extract sorted unique dates (YYYY-MM-DD) descending
-    
-// Retrieve unique dates sorted in descending order
-const uniqueDates = [...new Set(logs.map(l => l.date))].sort((a, b) => b.localeCompare(a));
+    const uniqueDates = [...new Set(logs.map(l => l.date))].sort((a, b) => b.localeCompare(a));
 
     const todayStr = new Date().toLocaleDateString('sv');
     const yesterday = new Date();
@@ -138,9 +132,7 @@ async function renderHeatmap() {
     startDate.setDate(startDate.getDate() - (daysTotal - 1));
 
     // Render 5 columns (weeks)
-    
-// Create 5 grid columns representing weeks
-for (let w = 0; w < 5; w++) {
+    for (let w = 0; w < 5; w++) {
       const colDiv = document.createElement('div');
       colDiv.className = 'heatmap-col';
 
@@ -197,9 +189,7 @@ async function renderQuickResume(onNavigateToTab, onSelectLesson) {
 
   if (!resumeTitleEl || !resumeLessonEl || !resumeBtn) return;
 
-  
-// Lookup local history identifiers for quick resume
-const lastCourseId = localStorage.getItem('er_last_course_id');
+  const lastCourseId = localStorage.getItem('er_last_course_id');
   const lastLessonIndex = localStorage.getItem('er_last_lesson_index');
 
   if (lastCourseId && lastLessonIndex) {

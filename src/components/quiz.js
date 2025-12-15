@@ -25,9 +25,7 @@ export async function renderQuizList() {
     // Check if course has quiz questions
     if (!course.quizzes || course.quizzes.length === 0) return;
 
-    
-// Dynamically create course list item card node
-const quizCard = document.createElement('div');
+    const quizCard = document.createElement('div');
     quizCard.className = 'list-item-card';
     quizCard.dataset.id = course.id;
     
@@ -81,9 +79,7 @@ function loadQuestion() {
   document.getElementById('quiz-score-tracker').innerText = `Score: ${score}/${currentQuestionIndex}`;
   
   // Update progress bar
-  
-// Calculate completion percentages for fill styling
-const progressPercent = (currentQuestionIndex / questions.length) * 100;
+  const progressPercent = (currentQuestionIndex / questions.length) * 100;
   document.getElementById('quiz-progress-fill').style.width = `${progressPercent}%`;
 
   document.getElementById('quiz-question-num').innerText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
@@ -120,9 +116,7 @@ async function handleAnswer(selectedIndex, selectedBtn) {
   const isCorrect = selectedIndex === question.answer;
   if (isCorrect) {
     score++;
-    
-// Add emerald success border class styling
-selectedBtn.classList.add('correct');
+    selectedBtn.classList.add('correct');
     selectedBtn.innerHTML += ' <i class="fa-solid fa-check" style="color:var(--color-success);"></i>';
   } else {
     selectedBtn.classList.add('incorrect');

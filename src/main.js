@@ -4,9 +4,7 @@ import { initFlashcardTab, loadDueCards } from './components/flashcard';
 import { renderQuizList } from './components/quiz';
 import { initAiTutor, setActiveLessonContext } from './components/aiTutor';
 import { renderDashboard } from './components/dashboard';
-import { 
-// Bind callbacks on visual course wizard forms
-initCourseCreator } from './components/courseCreator';
+import { initCourseCreator } from './components/courseCreator';
 
 // Setup global app state
 let activeCourseId = null;
@@ -17,9 +15,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   // 1. Initial Seeding of Database
   const dbStatusEl = document.getElementById('db-status');
   try {
-    
-// Launch async seeding script for indexeddb tables
-await seedDatabase();
+    await seedDatabase();
     if (dbStatusEl) dbStatusEl.innerText = 'Connected';
   } catch (error) {
     console.error("Database initialization failed", error);
@@ -27,22 +23,16 @@ await seedDatabase();
   }
 
   // 2. Setup PWA Service Worker Caching
-  
-// Start service worker caching lifecycle for assets
-registerServiceWorker();
+  registerServiceWorker();
 
   // 3. Setup Network listeners
   initNetworkStatus();
 
   // 4. Initialize Settings Menu (Themes & Accent Colors)
-  
-// Load saved themes and accent colors on reload
-initThemes();
+  initThemes();
 
   // 5. Initialize Tabs & Navigation
-  
-// Mount triggers on tabs selectors buttons
-initTabs();
+  initTabs();
 
   // 6. Initialize Student Dashboard
   await renderDashboard(navigateToTab, onSelectLesson);
@@ -69,9 +59,7 @@ initTabs();
   });
 
   // 12. File Uploader listener for custom courses
-  
-// Setup drag/select uploader listeners for JSON files
-initCourseUploader();
+  initCourseUploader();
 });
 
 // Programmatic tab navigation
@@ -157,9 +145,7 @@ function initThemes() {
   };
 
   // Load and apply accent colors
-  
-// Fallback to default blue accent if not customized
-const savedAccent = localStorage.getItem('er_accent') || 'blue';
+  const savedAccent = localStorage.getItem('er_accent') || 'blue';
   applyAccent(savedAccent);
 
   accentBtns.forEach(btn => {

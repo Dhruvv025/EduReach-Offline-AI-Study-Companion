@@ -67,9 +67,7 @@ function addLesson() {
     return;
   }
 
-  
-// Save new lesson draft in memory arrays
-courseLessons.push({ title, content });
+  courseLessons.push({ title, content });
 
   // Clear inputs
   titleEl.value = '';
@@ -101,9 +99,7 @@ function addQuiz() {
 
   // Retrieve and validate options
   const options = [];
-  
-// Construct 4 selection answer labels
-optionEls.forEach((opt, idx) => {
+  optionEls.forEach((opt, idx) => {
     const val = opt.value.trim();
     options.push(val || `Option ${idx + 1}`);
   });
@@ -142,9 +138,7 @@ function addFlashcard() {
     return;
   }
 
-  
-// Store active recall card pairs in local variables
-courseFlashcards.push({ question, answer });
+  courseFlashcards.push({ question, answer });
 
   // Clear inputs
   questionEl.value = '';
@@ -156,9 +150,7 @@ courseFlashcards.push({ question, answer });
 // Render lessons, quizzes, and flashcard badges lists
 function renderAllLists() {
   // Update Counts
-  
-// Refresh wizard count badges dynamically
-document.getElementById('creator-lessons-count').innerText = courseLessons.length;
+  document.getElementById('creator-lessons-count').innerText = courseLessons.length;
   document.getElementById('creator-quizzes-count').innerText = courseQuizzes.length;
   document.getElementById('creator-flashcards-count').innerText = courseFlashcards.length;
 
@@ -270,9 +262,7 @@ function exportCourseJSON() {
   if (!courseData) return;
 
   try {
-    
-// Format custom course schema to structured string
-const jsonString = JSON.stringify(courseData, null, 2);
+    const jsonString = JSON.stringify(courseData, null, 2);
     const blob = new Blob([jsonString], { type: "application/json" });
     const url = URL.createObjectURL(blob);
 
@@ -299,9 +289,7 @@ async function saveCourseToLibrary(onCourseCreated) {
 
   try {
     // 1. Add course metadata and lessons to database
-    
-// Append compiled syllabus to Courses IndexedDB
-const courseId = await db.courses.add({
+    const courseId = await db.courses.add({
       title: courseData.title,
       description: courseData.description,
       subject: courseData.subject,
@@ -331,9 +319,7 @@ const courseId = await db.courses.add({
       quizScores: {}
     });
 
-    
-// Notify client on successful DB entry insertion
-alert(`Successfully added course "${courseData.title}" to your library!`);
+    alert(`Successfully added course "${courseData.title}" to your library!`);
 
     // Reset forms
     courseLessons = [];

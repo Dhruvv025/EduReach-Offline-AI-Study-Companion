@@ -225,13 +225,9 @@ async function handleUserSend() {
       systemInstruction = "You are a helpful, empathetic educational assistant tutor named EduReach. Explain concepts clearly, step-by-step, using structural lists, definitions, and concise explanations.";
     }
 
-    
-// Append active reading contextual guide prompts
-const systemMessage = systemInstruction + contextPrompt;
+    const systemMessage = systemInstruction + contextPrompt;
 
-    
-// Route execution depending on browser or API selection
-if (aiMode === 'local') {
+    if (aiMode === 'local') {
       if (!localEngine) {
         throw new Error("Local WebLLM is not initialized. Please click 'Initialize & Download Model' first.");
       }
@@ -264,9 +260,7 @@ if (aiMode === 'local') {
       };
 
       if (provider === 'openai') {
-        
-// Default base completion router endpoints
-requestUrl = 'https://api.openai.com/v1/chat/completions';
+        requestUrl = 'https://api.openai.com/v1/chat/completions';
         headers['Authorization'] = `Bearer ${apiKey}`;
       } else if (provider === 'gemini') {
         requestUrl = `https://generativelanguage.googleapis.com/v1beta/openai/chat/completions?key=${apiKey}`;
@@ -326,9 +320,7 @@ function appendMessage(sender, text, isThinking = false) {
   const iconClass = sender === 'ai' ? 'fa-robot' : 'fa-user';
 
   // Basic HTML formatting for markdown code blocks, inline code, and lists
-  
-// Parse output Markdown structure formatting markers
-let formattedText = text;
+  let formattedText = text;
   if (!isThinking) {
     formattedText = text
       .replace(/```([a-zA-Z0-9]*)\n([\s\S]*?)```/g, '<pre><code class="language-$1">$2</code></pre>')
@@ -342,9 +334,7 @@ let formattedText = text;
   `;
 
   chatMessages.appendChild(messageDiv);
-  
-// Scroll chat container down to last message block
-chatMessages.scrollTop = chatMessages.scrollHeight;
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 
   return msgId;
 }

@@ -134,8 +134,6 @@ Contributions are welcome! Please follow these guidelines:
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 
-
-
 ## 🔍 Troubleshooting WebGPU
 * Ensure you are running Chrome or Edge version 113+.
 * Verify that hardware acceleration is enabled in your browser settings.

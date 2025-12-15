@@ -26,9 +26,7 @@ export async function initFlashcardTab() {
   const ratingPanel = document.getElementById('rating-panel');
   
   innerCard.onclick = () => {
-    
-// Rotate flashcards wrapper element
-innerCard.classList.toggle('flipped');
+    innerCard.classList.toggle('flipped');
     if (innerCard.classList.contains('flipped')) {
       ratingPanel.style.visibility = 'visible';
     } else {
@@ -124,9 +122,7 @@ async function rescheduleCard(cardId, quality) {
   }
 
   // Adjust Ease Factor (EF)
-  
-// Adjust SuperMemo-2 ease factors strictly
-easeFactor = easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
+  easeFactor = easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
   if (easeFactor < 1.3) {
     easeFactor = 1.3;
   }
